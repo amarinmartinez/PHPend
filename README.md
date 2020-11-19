@@ -1,2 +1,1 @@
-# testeando
-# PHPend
+# PHPend - Aplicación de creación de horarios escolares
