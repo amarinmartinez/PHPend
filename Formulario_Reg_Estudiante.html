@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de nuevo Estudiante</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+    <h1>Gestión UOC</h1>
+
+    <ul class=menu>
+    <li><a href="Index.html">Inicio</a></li>
+        <li><a href="Formulario_Reg_Estudiante.html">Registrarse</a></li>
+        <li><a href="Formulario_login.html">Login</a></li>
+    </ul>
+
+    <!--Contenedor del formulario de registro-->
+    <div class="contenedorFormulario">
+
+        <!--Contenedor de los campos del formulario-->
+        <form class="columna" action= "registro.php" method="post">
+
+            <!--Título del formulario-->
+            <h2>Formulario alta estudiante</h2>
+
+            <!--Campos del formulario-->
+            <input type="text" name="username" placeholder="Nombre de usuario">
+            <input type="text" name="pass" placeholder="Contraseña">
+            <input type="email" name="email" placeholder="Correo electrónico">
+            <input type="text" name="name" placeholder="Nombre">
+            <input type="text" name="surname" placeholder="Apellidos">
+            <input type="text" name="telephone" placeholder="Teléfono">
+            <input type="text" name="nif" placeholder="NIF">
+            <input type="submit" name="register">
+
+            <!--Llamada a la acción y link al formulario de login-->
+            <p>¿Ya tienes una cuenta?
+                <a href="Formulario_Login.html">Iniciar sesión</a>
+            </p>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión UOC</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+    <h1>Gestión UOC</h1>
+
+    <ul class=menu>
+    <li><a href="Index.html">Inicio</a></li>
+        <li><a href="Formulario_Reg_Estudiante.html">Registrarse</a></li>
+        <li><a href="Formulario_login.html">Login</a></li>
+    </ul>
+
+    <div class="contenedorFormulario">
+        <form class="columna" action="login.php" method="post">
+            <h2>Inicia sesión</h2>
+            <input type="text" name="username" placeholder="Nombre de usuario">
+            <input type="password" name="pass" placeholder="Contraseña">
+            <input type="submit" name="login" value="Iniciar sesión">
+            <p>¿Aún no tienes una cuenta?
+
+                <a href="Formulario_Reg_Estudiante.php">Regístrate</a>
+            </p>
+        </form>
+    </div>
+    
+</body>
+</html>

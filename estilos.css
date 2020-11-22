@@ -1,0 +1,124 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(19, 3, 167);
+    background-color: #fff;
+}
+
+h2 {
+	text-align: center;
+	padding: 12px;
+	color: #444
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    background: #f7ed98;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: rgb(19, 3, 167);
+    padding: 20px;
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover {
+    background: rgb(19, 3, 167);
+    color: #fce307;
+}
+
+p {
+	color: rgb(19, 3, 167);
+	text-align: justify;
+}
+.contenedorParrafo {
+	margin: auto;
+	margin-top: 60px;
+	width: 60%;
+	max-width: 700px;
+}
+
+.contenedorColumnas {
+	margin: auto;
+	margin-top: 60px;
+	width: 90%;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: row;
+}
+
+.columna{
+    background: rgb(228, 228, 228);
+    color: #333;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px #706c61; /*aplica sombra a la caja: eje X, eje Y, degradado, color*/
+    /*width: 23%; la caja ocupa el 25% de ancho disponible en la pantalla*/
+    /*box-sizing: border-box; /*incluye el padding y el box-shadow en el cálculo del 25% aucotmáticamente*/
+	float: left;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+/*Formularios*/
+.contenedorFormulario{
+	margin: auto;
+	margin-top: 30px;
+	width: 50%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: row;
+}
+form {
+	padding: 50px 20px;
+	background-color: #ededed;
+	margin: calc(25% + 100px);
+	margin-top: 70px;
+	padding-top: 28px;
+	margin-bottom: 30px
+}
+
+input {
+    width: calc(100% - 20px);
+    text-align: left;
+	padding: 9px;
+	margin: auto;
+	margin-top: 12px;
+	font-size: 16px
+}
+
+input[type='submit']{
+	background-color: #48e;
+	text-align: center;
+	color: #fff;
+	width: calc(30% - 20px);
+}
+
+.bad {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #a22;
+	color: #fff
+}
