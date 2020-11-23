@@ -15,15 +15,22 @@
         <li><a href="Formulario_Reg_Estudiante.html">Registrarse</a></li>
         <li><a href="Formulario_login.html">Login</a></li>
     </ul>
-
+    <!--Contenedor del formulario de registro-->
     <div class="contenedorFormulario">
+
+        <!--Contenedor de los campos del formulario-->
         <form class="columna" action="login.php" method="post">
+
+            <!--Título del formulario-->
             <h2>Inicia sesión</h2>
+
+            <!--Campos del formulario-->
             <input type="text" name="username" placeholder="Nombre de usuario">
             <input type="password" name="pass" placeholder="Contraseña">
             <input type="submit" name="login" value="Iniciar sesión">
-            <p>¿Aún no tienes una cuenta?
 
+            <!--Llamada a la acción y link al formulario de registro de estudiantes-->
+            <p>¿Aún no tienes una cuenta?
                 <a href="Formulario_Reg_Estudiante.php">Regístrate</a>
             </p>
         </form>

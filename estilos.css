@@ -67,9 +67,7 @@ p {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 5px 5px 2px #706c61; /*aplica sombra a la caja: eje X, eje Y, degradado, color*/
-    /*width: 23%; la caja ocupa el 25% de ancho disponible en la pantalla*/
-    /*box-sizing: border-box; /*incluye el padding y el box-shadow en el cálculo del 25% aucotmáticamente*/
+    box-shadow: 5px 5px 2px #706c61;
 	float: left;
 }
 
