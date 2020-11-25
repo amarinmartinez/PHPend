@@ -26,7 +26,7 @@ if(isset($_POST)){
 
         if($verify){
             // Utilizar una sesión para guardar los datos del estudiante logueado:
-            $_SESSION['student'] = $student;        
+            $_SESSION['student'] = $student;       
 
         }else{
             // Si algo falla enviar una sesión con el fallo:
