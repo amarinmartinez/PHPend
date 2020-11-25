@@ -10,8 +10,11 @@ if(isset($_POST['submit'])){
     }
 
     // Recoger los valores del formulario de registro
+    $username = isset($_POST['username']) ? mysqli_real_escape_string($db, $_POST['username']) : false;
     $nombre = isset($_POST['nombre']) ? mysqli_real_escape_string($db, $_POST['nombre']) : false;
     $apellidos = isset($_POST['apellidos']) ? mysqli_real_escape_string($db, $_POST['apellidos']) : false;
+    $nif = isset($_POST['nif']) ? mysqli_real_escape_string($db, $_POST['nif']) : false;
+    $phone = isset($_POST['phone']) ? mysqli_real_escape_string($db, $_POST['phone']) : false;
     $email = isset($_POST['email']) ? mysqli_real_escape_string($db, trim($_POST['email'])) : false;
     $password = isset($_POST['password']) ? mysqli_real_escape_string($db, trim($_POST['password'])) : false;
 
@@ -19,6 +22,14 @@ if(isset($_POST['submit'])){
     $errores = array();
 
     // Validar los datos antes de guardarlos en la base de datos
+    //Validar nombre de usuario
+    if(!empty($username) && !is_numeric($username)){
+        $username_validate = true;
+    }else{
+        $username_validate = false;
+        $errores['username'] = "El nombre de usuario no es válido";
+    }
+
     // Validar campo nombre
     if(!empty($nombre) && !is_numeric($nombre) && !preg_match("/[0-9]/", $nombre)){
         $nombre_validate = true;
@@ -33,6 +44,22 @@ if(isset($_POST['submit'])){
     }else{
         $apellidos_validate = false;
         $errores['apellidos'] = "El apellido no es válido";
+    }
+
+    // Validar nif
+    if(!empty($nif) && !is_numeric($nif)){
+        $nif_validate = true;
+    }else{
+        $nif_validate = false;
+        $errores['nif'] = "El NIF no es válido";
+    }
+
+    // Validar teléfono
+    if(!empty($phone) && is_numeric($phone)){
+        $phone_validate = true;
+    }else{
+        $phone_validate = false;
+        $errores['phone'] = "El teléfono no es válido";
     }
 
     // Validar email
@@ -59,7 +86,7 @@ if(isset($_POST['submit'])){
         $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]); // cost = número de veces que cifra la contraseña
 
         // Insertar usuario en la tabla usuarios de la bbdd: REVISAR!!! ¿CÓMO INSERTAR USUARIO EN LA TABLA CORRESPONDIENTE ESTUDIANTE / PROFESOR?
-        $sql = "INSERT INTO usuarios VALUES(null, '$nombre', '$apellidos', '$email', '$password_segura', CURDATE());";
+        $sql = "INSERT INTO students VALUES(null, '$username', '$password_segura', '$email', '$nombre', '$apellidos', '$phone', '$nif', CURDATE());";
         $guardar = mysqli_query($db, $sql);
                  
         if($guardar){
@@ -69,7 +96,7 @@ if(isset($_POST['submit'])){
         }
         
     }else{
-        $_SESSION['errores'] = $errores;        
+        $_SESSION['errores'] = $errores;  
     }
 }
 header('Location: index.php');

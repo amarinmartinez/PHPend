@@ -83,17 +83,17 @@ body{
 }
 
 #logo a h1{
-    margin-top: 25px;
-    
+    margin-top: 25px;    
 }
 
 /*MENU*/
 #menu{
     clear: both;
-    width: 100%;
+    margin: 0 auto;
+    width: 74.1%;
     height: 45px;
-    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
-    border: 1px solid #c9c9c9;
+    background: linear-gradient(to bottom, #f7ed98 0px, #ffea38 100%);
+    border: 1px solid #ffea38;
     border-radius: 8px;
     box-shadow: 0px 1px 1px #ccc;
     overflow: hidden; /* Todo lo que salga del marco del menú se oculta*/
@@ -114,11 +114,24 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     font-size: 15px;
-    color: #838282;
+    color: #004894;
 }
 
 #menu ul li a:hover{
-    background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+    background: linear-gradient(to bottom, #2979CD 0px, #004894 100%);
+    color: #ffffff;
+}
+
+#user-logged h3{    
+    float: right;
+    padding-top: 11px;
+    padding-right: 10px;    
+    color: #444;    
+}
+
+#user-logged a{     
+    float: right;  
+    margin-right: 10px;    
 }
 
 /*CONTENIDO*/
@@ -131,6 +144,37 @@ body{
     margin-bottom: 30px;
 }
 
+.contenedorColumnas {
+	margin: auto;
+	margin-top: 60px;
+	width: 90%;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: row;
+}
+
+.columna{
+    background: rgb(228, 228, 228);
+    color: #333;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px #706c61;
+	float: left;
+}
+
+.form-box{
+    margin: auto;
+    width: 70%;
+    height: auto;
+    border: 1px solid red;
+}
+
+#calendar-box{
+    text-align: center;
+}
+
 /*BARRA LATERAL*/
 #sidebar{
     float:right;
@@ -140,7 +184,7 @@ body{
 
 .block-aside{
     display:block;
-    width: 90%;
+    width: 60%;
     margin: 0px auto;
     margin-bottom: 35px;
     background: white;
@@ -205,14 +249,23 @@ input[type="submit"],
 
 /*PRINCIPAL*/
 #main-box{
-    float: left;
-    width: 65%;
+    margin: 0 auto;
+    width: 70%;
     min-height: 560px;
     background:white;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px #ccc;
-    margin-left: 20px;
-    padding: 20px;
+    box-shadow: 0px 0px 5px #ccc;    
+    padding: 30px;
+    overflow: hidden;
+}
+
+#main-box-2{
+    margin: 0 auto;
+    width: 70%;
+    min-height: 560px;    
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;    
+    padding: 30px;
     overflow: hidden;
 }
 
@@ -221,11 +274,12 @@ input[type="submit"],
 }
 
 #main-box h2{
-    font-size: 32px;
+    font-size: 30px;
     color: #444;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px #ccc;
     font-family: "fajala";
+    text-align: center;
 }
 
 #main-box h3{
@@ -235,6 +289,7 @@ input[type="submit"],
     letter-spacing: 1px;
     font-family: "fajala";
     margin-top: 25px;
+    text-align: center;    
 }
 
 #main-box p{

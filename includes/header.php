@@ -14,7 +14,7 @@
         <!-- LOGO -->
         <div id="logo">
             <a href="index.php">
-                <h1>Aplicación de creación de horario escolar</h1>
+                <h1>Aplicación de Creación de Horario Escolar</h1>
             </a>
         </div>
 
@@ -24,19 +24,27 @@
                 <li>
                     <a href="index.php">Inicio</a>
                 </li>
+                <?php if(!isset($_SESSION['student'])): ?> <!-- Si NO existe el usuario identificado -->
                 <li>
-                    <a href="index.php">Opción 1</a>
+                    <a href="form-login.php">Login</a>
                 </li>  
                 <li>
-                    <a href="index.php">Opción 2</a>
-                </li>  
-                <li>
-                    <a href="index.php">Sobre PHPend</a>
+                    <a href="form-register.php">Registrarse</a>
                 </li>
+                <?php endif; ?>
+                <?php if(isset($_SESSION['student'])): ?> <!-- Si NO existe el usuario identificado -->
                 <li>
-                    <a href="index.php">Contacto</a>
+                    <a href="calendar.php">Calendrio</a>
                 </li>  
-            </ul>    
+                <?php endif; ?>
+            </ul>            
+
+            <?php if(isset($_SESSION['student'])): ?> <!-- Si existe el usuario identificado -->        
+                <div id="user-logged">
+                    <a href="logout.php" class="boton boton-rojo">Cerrar sesión</a>
+                    <h3>Bienvenido, <?=$_SESSION['student'] ['name']. ' '.$_SESSION['student']['surname']; ?></h3> <!-- Se imprimen los datos por pantalla -->  
+                </div>
+            <?php endif; ?>    
         </nav> 
 
         <div class="clearfix"></div>

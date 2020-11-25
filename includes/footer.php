@@ -1,4 +1,4 @@
-    <div class="clearfix"></div>
+        <div class="clearfix"></div>
     </div><!-- fin container -->
     
     <!-- FOOTER -->
