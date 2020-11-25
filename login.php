@@ -40,4 +40,4 @@ if(isset($_POST)){
 }
 
 // Redirigir al index.php:
-header("Location: calendar.php");
+header("Location: calendar-view.php");

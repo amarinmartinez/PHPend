@@ -29,3 +29,4 @@ function deleteErrors(){
     
     return $borrado;
 }
+
