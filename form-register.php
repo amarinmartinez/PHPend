@@ -5,7 +5,7 @@
 <div id="main-box-2">
     <div class="block-aside">
 
-        <h3>Registrarse</h3> 
+        <h3>Formulario alta estudiante</h3> 
 
         <!-- Mostrar errores -->
         <?php if(isset($_SESSION['completado'])): ?>

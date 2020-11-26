@@ -64,7 +64,17 @@ if(isset($_POST['submit'])){
 
     // Validar email
     if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $email_validate = true;
+
+        $mailRep = mysqli_query($db,"SELECT * from students WHERE email = '$email'"); 
+        $mr = mysqli_num_rows($mailRep);
+    
+        if($mr == 1){
+            $pasword_validate = false;
+            $errores['email'] = "El Email introducido ya existe. Por favor, introduce uno distinto.";
+        }else{
+            $email_validate = true;
+        }
+
     }else{
         $email_validate = false;
         $errores['email'] = "El email no es válido";
@@ -99,4 +109,4 @@ if(isset($_POST['submit'])){
         $_SESSION['errores'] = $errores;  
     }
 }
-header('Location: index.php');
+header('Location: form-register.php');

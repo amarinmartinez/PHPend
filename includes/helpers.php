@@ -18,7 +18,7 @@ function deleteErrors(){
     }
     
     if(isset($_SESSION['errores_entrada'])){
-        $_SESSION['errores_entrada'] = null;  
+        $_SESSION['errores_entrada'] = null;
         
     }
     
@@ -29,4 +29,3 @@ function deleteErrors(){
     
     return $borrado;
 }
-

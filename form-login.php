@@ -14,7 +14,7 @@
 <div id="main-box-2">
     <?php if(!isset($_SESSION['student'])): ?> <!-- Si NO existe el usuario identificado --> 
     <div id="login" class="block-aside">
-        <h3>Identifícate</h3>
+        <h3>Inicia sesión</h3>
 
         <?php if(isset($_SESSION['error_login'])): ?> <!-- Si existe el usuario identificado -->  
             <div class="alerta alerta-error"> 
@@ -29,7 +29,11 @@
             <label for="password">Contraseña</label>
             <input type="password" name="password">
 
-            <input type="submit" value="Entrar">                    
+            <input type="submit" value="Entrar">    
+
+            <br/>
+            <!--Llamada a la acción y link al formulario de registro de estudiantes-->
+            <p>¿Aún no tienes una cuenta? <a href="register.php">Regístrate</a>             
         </form>
     </div>
     <?php endif; ?>

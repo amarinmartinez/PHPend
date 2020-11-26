@@ -4,7 +4,6 @@
 
 class Calendar {
 
-
   public static function calendar_month($month){
 
     //$mes = date("Y-m");
@@ -18,7 +17,6 @@ class Calendar {
     $daysmonth  =  date("d", strtotime($fecha));
     $montmonth  =  date("m", strtotime($fecha));
     $yearmonth  =  date("Y", strtotime($fecha));
-
 
     // sacar el lunes de la primera semana
     $nuevaFecha = mktime(0,0,0,$montmonth,$daysmonth,$yearmonth);
@@ -136,9 +134,6 @@ class Calendar {
       }
 
       return $mes;
-
   }
-
-
 }
- ?>
+?>

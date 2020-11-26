@@ -5,6 +5,8 @@
 <!-- MAIN BOX -->
 <div id="main-box">  
 
+<h1>Aquí va el calendario</h1>
+
               
 </div>
 
