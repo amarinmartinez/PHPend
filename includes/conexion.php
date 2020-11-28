@@ -2,7 +2,7 @@
 // Conexión
 $server = 'localhost';
 $username = 'root';
-$password = '';
+$password = 'root';
 $database = 'horarioapp';
 //$port = '3306';
 $db = mysqli_connect($server, $username, $password, $database);

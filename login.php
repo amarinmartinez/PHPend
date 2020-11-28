@@ -56,7 +56,7 @@ if(isset($_POST)){
             $_SESSION['admin'] = $admin;
             
             // Redirigir al panel principal.php
-            header('Location: control-panel-view.php');   
+            header('Location: admin/control-panel-view.php');   
 
         }else{
             // Si algo falla enviar una sesión con el fallo:
