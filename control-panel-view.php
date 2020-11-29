@@ -4,8 +4,7 @@
 <!-- MAIN BOX -->
 <div id="main-box">  
 
-<h2>Bienvenido al Panel de Administrador. Selecciona una de las opciones de la barra de navegación para comenzar a trabajar.</h>
-              
+      <h2>Bienvenido al Panel de Administrador. Selecciona una de las opciones de la barra de navegación para comenzar a trabajar.</h2>              
 </div>
 
 <?php require_once 'includes/footer.php'; ?>

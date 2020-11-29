@@ -1,13 +1,10 @@
 <?php require_once 'includes/helpers.php'; ?>
-
 <?php require_once 'includes/header.php';?>
 
 <?php if(isset($_SESSION['student'])): ?> <!-- Si existe el usuario identificado -->        
     <div id="usuario-logueado" class="block-aside">
-        <a href="create-post.php" class="boton boton-verde">Crear entradas</a>
-        <a href="create-category.php" class="boton">Crear categoría</a>
-        <a href="mydata.php" class="boton boton-naranja">Mis datos</a>
 
+        <a href="mydata.php" class="boton boton-naranja">Mis datos</a>
     </div>
 <?php endif; ?>
 
